@@ -1,12 +1,9 @@
 import { NavLink } from "react-router-dom";
-import Dashboard from "../../screens/Dashboard";
-import Todos from "../../screens/Todos";
-import Weather from "../../screens/Weather";
 import { pathes } from "../../routing/pathes";
-import path from "path";
-import Profile from "../../screens/Profile";
+import { useTranslation } from "react-i18next";
 
 const Sidebar = () => {
+  const { t } = useTranslation();
   return (
     <aside className="w-16 md:w-32 lg:w-48 border">
       <nav className="flex flex-col gap-2">
@@ -18,7 +15,7 @@ const Sidebar = () => {
             }`
           }
         >
-          <Dashboard />
+          {t("sidebar.dashboard")}
         </NavLink>
         <NavLink
           to={pathes.todos}
@@ -28,7 +25,7 @@ const Sidebar = () => {
             }`
           }
         >
-          <Todos />{" "}
+          {t("sidebar.todos")}
         </NavLink>
         <NavLink
           to={pathes.weather}
@@ -38,7 +35,7 @@ const Sidebar = () => {
             }`
           }
         >
-          <Weather />
+          {t("sidebar.weather")}
         </NavLink>
         <NavLink
           to={pathes.profile}
@@ -48,7 +45,7 @@ const Sidebar = () => {
             }`
           }
         >
-          <Profile />
+          {t("sidebar.profile")}
         </NavLink>
       </nav>
     </aside>
