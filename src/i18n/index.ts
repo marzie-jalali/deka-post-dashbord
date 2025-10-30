@@ -15,6 +15,9 @@ i18n.use(initReactI18next).init({
           goodMorning: "Good Morning",
           goodAfternoon: "Good Afternoon",
           goodEvening: "Good Evening",
+          welcome: "Welcome!",
+          firstVisit:
+            "for the first time you are using the dashboard, add your username and enjoy it.",
         },
         profile: {
           username: "Username",
@@ -25,6 +28,10 @@ i18n.use(initReactI18next).init({
           en: "English",
           fa: "Persian",
           save: "Save",
+        },
+        weather: {
+          windspeed: "Wind Speed",
+          selectCity: "Select a city",
         },
       },
     },

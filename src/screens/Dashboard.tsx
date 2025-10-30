@@ -1,7 +1,9 @@
 import useUserStore from "../store/userStore";
 import { useCurrentTime } from "../hooks/dashboard/useCurrentTime";
+import useFirstVisit from "../hooks/dashboard/useFirstVisit";
 
 const Dashboard = () => {
+  useFirstVisit();
   const { time, getGreeting } = useCurrentTime();
   const { username } = useUserStore();
   return (
