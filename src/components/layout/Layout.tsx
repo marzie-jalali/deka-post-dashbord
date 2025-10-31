@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom";
 
 const Layout = () => {
   return (
-    <div className="bg-[#f9fafb] m-2">
+    <div className="bg-background m-2">
       <div className="flex flex-col ">
         {" "}
         <Headr />
@@ -12,8 +12,8 @@ const Layout = () => {
 
       <div className="flex flex-1 ">
         <Sidebar />
-        <main className="flex-1 p-4 sm:p-6  border ">
-          <div className=" bg-white  p-6  min-h-[calc(100vh-8rem)]">
+        <main className="flex-1 p-4 sm:p-6 border border-border">
+          <div className="bg-card p-6 min-h-[calc(100vh-8rem)]">
             {" "}
             <Outlet />
           </div>

@@ -35,12 +35,15 @@ const Profile = () => {
           type="text"
           {...register("username")}
           placeholder={t("profile.username")}
-          className="input input-bordered w-full"
+          className="w-full"
         />
 
         <Select
           value={watch("theme")}
-          onValueChange={(v: string) => setValue("theme", v)}
+          onValueChange={(v: string) => {
+            setValue("theme", v);
+            setTheme(v as "light" | "dark"); // Update theme immediately
+          }}
         >
           <SelectTrigger className="w-[180px]">
             <SelectValue placeholder={t("profile.theme")} />
